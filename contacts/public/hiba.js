@@ -1,6 +1,7 @@
 var app = angular.module('myApp', []);
 
 app.controller("AppCtrl", function($scope) {
+
     person1 = {
     	name: "hiba",
     	contact: "baba",
