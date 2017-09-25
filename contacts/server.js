@@ -1,11 +1,10 @@
 
-var http = require('http');
+var express = require('express');
+var app = express()
 
-http.createServer(function(request, response) {
-  console.log(request);
-  response.writeHead(200, {['Content-Type']: 'text/plain'});
-  response.end('Hello, World!');
-}).listen(3000, '127.0.0.1')
+app.get('/', function (req, res) {
+	res.send("hello")
+})
 
-
-console.log('Listening on http://');
+app.listen(3000)
+console.log("server 3000 hiba")
