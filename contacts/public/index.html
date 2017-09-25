@@ -7,16 +7,21 @@
 	<title>RBK Contacts List</title>
 </head>
 <body>
-	<div>
+	<div class="container-fluid" ng-controller="Appctrl">
 		<h1>RBK Contacts List</h1>
-		<table>
-			<th>hi</th>
-			<th>hi</th>
-		</table>
+			<input ng-model="test">
+			{{test}}
+
+				<table class="table">
+					<tr>
+					<th>student name</th>
+					<th>Emergency Contact name</th>
+					<th>phone</th>	
+					<th>Pre-existing condition</th>			
+					</tr>
+				</table>
 		
 	</div>
-<input ng-model="test">
-{{test}}
 
 
 <!-- Angular -->
