@@ -23,6 +23,12 @@
 						</tr>
 					</thead>
 					<tbody>
+						<tr>
+							<td><input ng-model="input.name"></td>
+							<td><input ng-model="input.contact"></td>
+							<td><input ng-model="input.phone"></td>
+							<td><input ng-model="input.condition"></td>
+						</tr>
 						<tr ng-repeat="person in people">
 						<td>{{person.name}}</td>
 						<td>{{person.contact}}</td>
