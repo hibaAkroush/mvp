@@ -1,33 +1,38 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="myApp">
 <head>
 <!-- Bootstrap -->
-<!-- make me look gooood plz-->
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 	<title>RBK Contacts List</title>
 </head>
 <body>
-	<div class="container-fluid" ng-controller="Appctrl">
-		<h1>RBK Contacts List</h1>
-			<input ng-model="test">
-			{{test}}
+<!-- Angular -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+
+	<h1>RBK Contacts List</h1>	
+		<div class="container-fluid" ng-controller="AppCtrl">
 
 				<table class="table">
-					<tr>
-					<th>student name</th>
-					<th>Emergency Contact name</th>
-					<th>phone</th>	
-					<th>Pre-existing condition</th>			
-					</tr>
-				</table>
-		
+					<thead>
+						<tr>
+							<th>student name</th>
+							<th>Emergency Contact name</th>
+							<th>phone</th>	
+							<th>Pre-existing condition</th>			
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="person in people">
+						<td>{{person.name}}</td>
+						<td>{{person.contact}}</td>
+						<td>{{person.phone}}</td>
+						<td>{{person.condition}}</td>								
+						</tr>					
+					</tbody>
+				</table>	
 	</div>
-
-
-<!-- Angular -->
-<script type="text/javascript " src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
-
-
-
+<!-- controller -->
+<script type="text/javascript" src="hiba.js"></script>
 </body>
 </html>
