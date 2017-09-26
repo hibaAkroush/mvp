@@ -8,16 +8,7 @@ $http.get('/people').then(function(response){
 })
 
 $scope.add = function(){
-	var object = {
-	"name" : $scope.input.name,
-	"contact" : $scope.input.contact,
-	"phone" : $scope.input.phone,
-	"condition" : $scope.input.condition
-	}
-
-
-	console.log(object)
-	//$http.post("/people",name)
+	$http.post("/people",$scope.input)
 }
 });
 
@@ -25,6 +16,11 @@ app.config(['$qProvider', function ($qProvider) {
     $qProvider.errorOnUnhandledRejections(false);
 }]);
 
+
+	// var name = $scope.input.name
+	// var contact = $scope.input.contact
+	// var phone = $scope.input.phone
+	// var condition = $scope.input.condition
 	   //  person1 = {
     // 	name: "hiba",
     // 	contact: "baba",
