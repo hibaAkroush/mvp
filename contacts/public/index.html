@@ -19,7 +19,8 @@
 							<th>student name</th>
 							<th>Emergency Contact name</th>
 							<th>phone</th>	
-							<th>Pre-existing condition</th>			
+							<th>Pre-existing condition</th>	
+							<td></td>									
 						</tr>
 					</thead>
 					<tbody>
@@ -28,14 +29,14 @@
 							<td><input ng-model="input.contact"></td>
 							<td><input ng-model="input.phone"></td>
 							<td><input ng-model="input.condition"></td>
-							<td><button ng-click="add">Add Contact</button></td>	
+							<td><button ng-click="add()">Add Contact</button></td>							
+
 						</tr>
 						<tr ng-repeat="person in people">
 						<td>{{person.name}}</td>
 						<td>{{person.contact}}</td>
 						<td>{{person.phone}}</td>
 						<td>{{person.condition}}</td>	
-
 						</tr>					
 					</tbody>
 				</table>	

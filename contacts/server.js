@@ -34,7 +34,6 @@ console.log("recived a get ")
   	if(err){
   		console.log("tabban!")
   	}
-  	console.log(data)
   	res.json(data) 
   })
 
