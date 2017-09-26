@@ -3,17 +3,28 @@ var app = angular.module('myApp', []);
 app.controller("AppCtrl", function($scope,$http) {
 
 $http.get('/people').then(function(response){
-	console.log("i got data")
+	console.log("show me what you got!")
 	$scope.people = response.data
 })
 
 $scope.add = function(){
-	var name = $scope.input.name
-	var contact = $scope.input.contact
-	var phone = $scope.input.phone
-	var condition = $scope.input.condition
-	console.log(name,contact,phone,condition)
+	var object = {
+	"name" : $scope.input.name,
+	"contact" : $scope.input.contact,
+	"phone" : $scope.input.phone,
+	"condition" : $scope.input.condition
+	}
+
+
+	console.log(object)
+	//$http.post("/people",name)
 }
+});
+
+app.config(['$qProvider', function ($qProvider) {
+    $qProvider.errorOnUnhandledRejections(false);
+}]);
+
 	   //  person1 = {
     // 	name: "hiba",
     // 	contact: "baba",
@@ -34,11 +45,3 @@ $scope.add = function(){
     // }
     // var people = [person1,person2,person3]	
     // $scope.people = people
-});
-
-
-app.config(['$qProvider', function ($qProvider) {
-    $qProvider.errorOnUnhandledRejections(false);
-}]);
-
-
